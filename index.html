@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body onload="initialize();">
+    Part 1
+    <div id="numoutput">0</div>
+    <hr />
+    <button onclick="modifyNumber(getRandomInteger(-10, 10));">Modify The Number Randomly</button>
+
+    <script src="script.js"></script>
+</body> -->
+
+<!-- <body onload = "intialize();">
+    Part 2
+    Twix: <span id="numtwix"></span><br />
+    SCream Eggs: <span id="numeggs"></span><br />
+    Twizzlers: <span id="numtwizzlers"></span><br />
+    Airheads: <span id="numairheads"></span><br />
+    Ring Pops: <span id="numringpops"></span><br />
+    <button onclick = "giveCandy();">Give out Candy</button>
+
+    <hr />
+
+    <div id="candylog"></div>
+
+    <script>
+        const TWIX = 0, EGG = 1, TWIZZLER = 2, AIRHEAD = 3, RINGPOP = 4;
+        function initialize() {
+            numTwixOutput = document.getElementById("numtwix");
+            numScreamEggsOutput = document.getElementById("numeggs");
+            numTwizzlersOutput = document.getElementyId("numtwizzlers");
+            numAirheadsOutput = document.getElementById("numairheads");
+            numRingPopsOutput = document.getElementById("numringpops");
+            candyLogOutput = document.getElementById("candylog");
+
+            numTwix = parseInt(Math.random() * 11);
+            numScreamEggs = parseInt(Math.random() * 11);
+            numTwizzlers = parseInt(Math.random() * 11);
+            numAirheads = parseInt(Math.random() * 11);
+            numRingPops = parseInt(Math.random() * 11);
+
+            candyLog = "";
+
+            display();
+        }
+        function display() {
+            numTwixOutput.innerHTML = numTwix;
+            numScreamEggsOutput.innerHTML = numScreamEggs;
+            numTwizzlersOutput.innerHTML = numTwizzlers;
+            numAirheadsOutput.innerHTML = numAirheads;
+            numRingPopsOutput.innerHTML = numRingPops;
+
+            candyLogOutput.innerHTML = candyLog;
+        }
+        function giveCandy() {
+            var selectedCandy = parseInt(Math.random() * 5)
+        }
+
+        function giveCandy() {
+            if (numTwix + numScreamEggs + numTwizzlers + numAirheads + numRingPops == 0) {
+                candyLog = "You are all out of candy.<br />" + candyLog;
+            } else {
+                var badSelection = true;
+                var candyName = "";
+                while (badSelection) {
+                    var selectedCandy = parseInt(Math.random() * 5);
+                    if (selectedCandy = TWIX) {
+                        candyName = "Twix";
+                        if (numTwix > 0) {
+                            numTwix--;
+                            badSelection = false;
+                        }
+                    } else {
+                        if (selectedCandy == EGG) {
+                            candyName = "Scream Egg";
+                            if (numScreamEggs > 0) {
+                                numScreamEggs--;
+                                badSelection = false;
+                            }
+                        } else {
+                            if (selectedCandy == TWIZZLER) {
+                                candyName = "Twizzler";
+                                if (numTwizzlers > 0) {
+                                    numTwizzlers--;
+                                    badSelection = false;
+                                }
+                            } else {
+                                if (selectedCandy == AIRHEAD) {
+                                    candyName = "Airhead";
+                                    if (numAirheads > 0) {
+                                        numAirheads--;
+                                        badSelection = false;
+                                    }
+                                } else {
+                                    if (numRingPops > 0) {
+                                        candyName = "Ring Pop";
+                                        numRingPops--;
+                                        badSelection = false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if (badSelection) {
+                        candyLog = "You tried to give out a(n) " + candyName + ", but you have none left.<br />" + candyLog;
+                    } else {
+                        candyLog = "You gave out a " + candyName + ".<br />" + candyLog;
+                    }
+                }
+            }
+            display();
+        }
+    </script>
+</body> -->
+
+<body onload="intialize();">
+    <h1 id="greeting"></h1>
+    <form id="inputform">
+        First Name: <input name="fname" type="text" />
+        Last Name: <input name="lname" type="text" />
+        <label>
+            <input name="pizza" type="checkbox" />Check her if you like to eat pizza.
+        </label>
+
+        <br /><br />
+
+        Where are you from?
+        <label>
+            <input type="radio" name="origin" value="Earth" /> Earth
+        </label>
+        <label>
+            <input type="radio" name="origin" value="The Moon" /> The Moon
+        </label>
+        <label>
+            <input type="radio" name="origin" value="Mars" /> Mars
+        </label>
+    </form>
+    <hr />
+    <button onclick="recordData();">Click Here When Done</button>
+
+    <script>
+        function initialize() {
+            inputContainer = document.getElementById("inputform");
+            greetingOutput = document.getElementById("greeting");
+
+            firstName = "";
+            lastName = "";
+            eatsPizza = false;
+            placeOfOrigin = "";
+        }
+        function recordData() {
+            firstname = inputContainer.fname.value;
+            lastName = inputContainer.lname.value;
+            eatsPizza = inputContainer.pizza.checked;
+            placeOfOrigin = inputContainer.origin.value;
+
+            inputContainer.fname.value = "";
+            inputContainer.lname.value = "";
+
+            display();
+        }
+        function display() {
+            greetingOutput.innerHTML = "Hello " + firstName + " " + lastName + " from" + placeOfOriign + "! Welcome to our page!<br />";
+
+            if (!eatsPizza) {
+                greetingOutput.innerHTML += "It looks like you're not a fan of pizza.";
+            } else {
+                greetingOutput.innerHTML += "It looks like you're a fan of pizza.";
+            }
+        }
+    </script>
+</body>
+</html>
