@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- <body onload="initialize();">
     Part 1
@@ -119,7 +120,8 @@
     </script>
 </body> -->
 
-<body onload="intialize();">
+<!-- <body onload="intialize();">
+    Part 3
     <h1 id="greeting"></h1>
     <form id="inputform">
         First Name: <input name="fname" type="text" />
@@ -172,6 +174,72 @@
                 greetingOutput.innerHTML += "It looks like you're not a fan of pizza.";
             } else {
                 greetingOutput.innerHTML += "It looks like you're a fan of pizza.";
+            }
+        }
+    </script>
+</body> -->
+
+<!-- <body onload="initialize();">
+    Part 4
+    <h1>Films List</h1>
+    <ul>
+        <h3>Genres</h3>
+        <li>
+            <h4>Comedy</h4>
+            <ol>
+                <li>Dodgeball: A True Underdog Story</li>
+                <li>Wedding Crashers</li>
+                <li>Airplane</li>
+            </ol>
+        </li>
+    </ul>
+</body> -->
+
+<!-- <body onload="initialize();">
+    Part 5
+    <table>
+        <tr>
+            <th rowspan="8"><div>MLB</div></th>
+        </tr>
+        <tr>
+            <th colspan="3">American League</th>
+            <th colspan="3">National League</th>
+        </tr>
+        <tr>
+            <th>West</th>
+            <th>Central</th>
+            <th>East</th>
+            <th>West</th>
+            <th>Central</th>
+        </tr>
+    </table>
+</body> -->
+
+<body onload="initialize();">
+    <table id="dicetable">
+        <tr>
+            <th>Roll</th>
+            <th>Result</th>
+        </tr>
+    </table>
+
+    <script>
+        function initialize() {
+            diceTable = document.getElementById("dicetable");
+            rollDice();
+        }
+        function rollDice() {
+            var numRolls = getRandomInteger(25, 100);
+            
+            for (var i = 0; i < numRolls; i++) {
+                var dieRoll = getRandomInteger(1, 6);
+
+                var newRow = diceTable.insertRow();
+                var newCell = newRow.insertCell();
+                newCell.innerHTML = "Roll " + (i + 1);
+
+                newCell = newRow.insertCell();
+                newCell.innerHTML = dieRoll;
             }
         }
     </script>

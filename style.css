@@ -1,0 +1,57 @@
+/* 
+Part 4
+ul {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+body {
+    background-color: cornflowerblue;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    font-size: 24pt;
+    color: #cc0000;
+}
+h4 {
+    text-decoration: underline;
+    font-size: 18pt;
+    color: #734d26;
+}
+li {
+    font-size: 14pt;
+    font-weight: bold;
+} */
+
+/* 
+Part 5
+table {
+    border: thick solid blue;
+    width: 100%;
+}
+td {
+    border: thin solid black;
+    padding: 3px;
+    width: 15%;
+}
+th {
+    border: medium solid black;
+    padding: 5px;
+}
+div {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 24pt;
+} */
+
+table {
+    border: thick solid grey;
+    border-collapse: collapse;
+    width: 25%;
+}
+th, td {
+    border: thin solid black;
+    padding: 8px;
+    width: 50%;
+}
